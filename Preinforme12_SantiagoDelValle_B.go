@@ -1,31 +1,20 @@
 //Punto Numero 1 "Crear una lista"
 //Punto Numero 2 "Diferencia entre la mayor y la menor cantidad"
 //Punto numero 3 "Media y mediana"
+//Punto numero 4 "la cantidad de semanas consecutivas en las que la presión promedio semanal supera o está por debajo del promedio anual de presiones semanales."
+//Punto numero 6 "Temperaturas"
 
 package main
 
 import (
 	"fmt"
-	"sort"
 )
 
 func main() {
 
-	lista := []float64{110.06, 107.89, 108.45, 108.49, 109.03, 110.11, 109.87, 119.38, 119.35, 116.34, 117.73, 120.01, 118.19, 119.53, 117.09, 118.03, 118.65, 117.47, 117.49, 109.65, 110.44, 110.51, 107.38, 109.26, 106.18, 109.36, 106.61, 105.16, 110.11, 105.48, 108.37, 107.59, 108.91, 108.35, 109.57, 122.56, 124.44, 125.97, 121.03, 121.22, 122.41, 122.15, 124.52, 123.35, 125.76, 121.08, 122.29, 105.42, 110.67, 107.73, 105.76, 107.85}
+	listaTemperatura := []float64{200.783333, 196.111, 197.583333, 197.66667, 198.738889, 200.883333, 200.405556, 219.288889, 219.227778, 213.255556, 216.011111, 220.538889, 216.927778, 219.588889, 214.444, 216.111, 217.778, 215.494444, 215.538889, 199.966667, 201.538889, 201.677778, 195.461111, 199.194444, 193.077778, 199.38889, 193.933333, 191.05, 200.883333, 191.688889, 197.427778, 195.877778, 198.5, 197.383333, 199.811111, 225.605556, 229.338889, 232.377778, 222.566667222, 222.94444, 225.305556, 224.788889, 229.494444, 227.172222, 231.961111, 222.66667, 225.066667, 191.566667, 201.994444, 196.155556, 192.244444, 196.394444}
 
-	x := 5930
-	y := len(lista)
-	Media := x / y
+	fmt.Println(listaTemperatura)
+	fmt.Print(len(listaTemperatura))
 
-	fmt.Println("La media es", Media, "Kpa aproximadamente")
-
-	sort.Float64s(lista)
-
-	Promedio1 := lista[:28]
-	Promedio2 := lista[28:]
-	Longitud1 := len(Promedio1)
-	Longitud2 := len(Promedio2)
-
-	fmt.Println("Los siguientes valores corresponden a las semanas malas por debajo del promedio", Promedio1, "Siendo un total de", Longitud1, "Semanas")
-	fmt.Println("Los siguientes valores corresponden a las semanas buenas por encima del promedio", Promedio2, "Siendo un total de", Longitud2, "Semanales")
 }
