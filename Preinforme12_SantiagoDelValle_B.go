@@ -4,7 +4,10 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 
@@ -16,12 +19,13 @@ func main() {
 
 	fmt.Println("La media es", Media, "Kpa aproximadamente")
 
-	Mediana := 110
+	sort.Float64s(lista)
 
-	fmt.Println("La mediana es", Mediana, "Kpa aproximadamente")
+	Promedio1 := lista[:28]
+	Promedio2 := lista[28:]
+	Longitud1 := len(Promedio1)
+	Longitud2 := len(Promedio2)
 
-	Diferencia := Media - Mediana
-
-	fmt.Println("La diferencia entre la media y la mediana es de", Diferencia, "Kpa aproximadamente")
-
+	fmt.Println("Los siguientes valores corresponden a las semanas malas por debajo del promedio", Promedio1, "Siendo un total de", Longitud1, "Semanas")
+	fmt.Println("Los siguientes valores corresponden a las semanas buenas por encima del promedio", Promedio2, "Siendo un total de", Longitud2, "Semanales")
 }
